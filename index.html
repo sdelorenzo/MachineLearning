@@ -181,33 +181,33 @@ set.seed(314)
 ## 
 ##           Reference
 ## Prediction    A    B    C    D    E
-##          A 1669    8    0    0    0
-##          B    5 1128    5    0    0
-##          C    0    3 1021    3    2
-##          D    0    0    0  956    0
-##          E    0    0    0    5 1080
+##          A 1672    9    0    1    0
+##          B    2 1127    9    0    0
+##          C    0    3 1015    9    0
+##          D    0    0    2  954    2
+##          E    0    0    0    0 1080
 ## 
 ## Overall Statistics
 ##                                           
-##                Accuracy : 0.9947          
-##                  95% CI : (0.9925, 0.9964)
+##                Accuracy : 0.9937          
+##                  95% CI : (0.9913, 0.9956)
 ##     No Information Rate : 0.2845          
 ##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16       
 ##                                           
-##                   Kappa : 0.9933          
+##                   Kappa : 0.992           
 ##  Mcnemar's Test P-Value : NA              
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity            0.9970   0.9903   0.9951   0.9917   0.9982
-## Specificity            0.9981   0.9979   0.9984   1.0000   0.9990
-## Pos Pred Value         0.9952   0.9912   0.9922   1.0000   0.9954
-## Neg Pred Value         0.9988   0.9977   0.9990   0.9984   0.9996
+## Sensitivity            0.9988   0.9895   0.9893   0.9896   0.9982
+## Specificity            0.9976   0.9977   0.9975   0.9992   1.0000
+## Pos Pred Value         0.9941   0.9903   0.9883   0.9958   1.0000
+## Neg Pred Value         0.9995   0.9975   0.9977   0.9980   0.9996
 ## Prevalence             0.2845   0.1935   0.1743   0.1638   0.1839
-## Detection Rate         0.2836   0.1917   0.1735   0.1624   0.1835
-## Detection Prevalence   0.2850   0.1934   0.1749   0.1624   0.1844
-## Balanced Accuracy      0.9976   0.9941   0.9967   0.9959   0.9986</code></pre>
+## Detection Rate         0.2841   0.1915   0.1725   0.1621   0.1835
+## Detection Prevalence   0.2858   0.1934   0.1745   0.1628   0.1835
+## Balanced Accuracy      0.9982   0.9936   0.9934   0.9944   0.9991</code></pre>
 <p>Last we predict on the original test data set for the quiz.</p>
 <pre class="r"><code>finalpred &lt;- predict(rfmod,test2)</code></pre>
 </div>
@@ -231,9 +231,9 @@ set.seed(314)
 ## Resampling results across tuning parameters:
 ## 
 ##   mtry  Accuracy   Kappa    
-##    2    0.9881342  0.9849880
-##   25    0.9903904  0.9878432
-##   49    0.9823821  0.9777097
+##    2    0.9888620  0.9859096
+##   25    0.9903183  0.9877517
+##   49    0.9809265  0.9758650
 ## 
 ## Accuracy was used to select the optimal model using  the largest value.
 ## The final value used for the model was mtry = 25.</code></pre>
@@ -250,7 +250,7 @@ set.seed(314)
 ## Resampling results:
 ## 
 ##   Accuracy   Kappa    
-##   0.6968629  0.6157894</code></pre>
+##   0.6979757  0.6172982</code></pre>
 <p>Important variables</p>
 <pre class="r"><code>varImp(rfmod)</code></pre>
 <pre><code>## rf variable importance
@@ -259,25 +259,25 @@ set.seed(314)
 ## 
 ##                      Overall
 ## yaw_belt              100.00
-## pitch_forearm          80.26
-## magnet_dumbbell_z      63.41
-## magnet_dumbbell_y      52.29
-## roll_forearm           47.68
-## magnet_belt_y          42.43
-## magnet_belt_z          31.85
-## gyros_belt_z           28.89
-## accel_dumbbell_y       27.04
-## roll_dumbbell          26.30
-## magnet_dumbbell_x      26.23
-## accel_forearm_x        21.97
-## magnet_belt_x          20.36
-## total_accel_dumbbell   19.74
-## accel_dumbbell_z       19.13
-## roll_arm               18.81
-## magnet_forearm_z       18.53
-## accel_forearm_z        16.77
-## yaw_arm                16.71
-## total_accel_belt       16.60</code></pre>
+## pitch_forearm          82.12
+## magnet_dumbbell_z      64.16
+## magnet_dumbbell_y      56.02
+## roll_forearm           49.27
+## magnet_belt_y          42.57
+## gyros_belt_z           32.43
+## magnet_belt_z          31.07
+## roll_dumbbell          27.02
+## accel_dumbbell_y       25.45
+## magnet_dumbbell_x      24.33
+## accel_forearm_x        23.29
+## total_accel_dumbbell   20.70
+## magnet_belt_x          20.68
+## roll_arm               20.60
+## accel_dumbbell_z       19.39
+## magnet_forearm_z       19.15
+## total_accel_belt       18.19
+## yaw_arm                17.29
+## accel_forearm_z        16.38</code></pre>
 </div>
 
 
